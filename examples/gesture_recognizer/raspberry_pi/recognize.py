@@ -154,7 +154,7 @@ def run(model: str, num_hands: int,
         # print(gestures)
         category_name = gestures[0][0].category_name
         score = round(gestures[0][0].score, 2)
-        result_text = category_name + ' (' + str(score) + ')'
+        result_text = f'{category_name} ({str(score)})'
 
         # Compute text size
         text_size = \
