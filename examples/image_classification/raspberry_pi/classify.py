@@ -126,7 +126,7 @@ def run(model: str, max_results: int, score_threshold: float, camera_id: int,
       for idx, category in enumerate(classification_result_list[0].classifications[0].categories):
         category_name = category.category_name
         score = round(category.score, 2)
-        result_text = category_name + ' (' + str(score) + ')'
+        result_text = f'{category_name} ({str(score)})'
 
         label_location = legend_x + label_rect_size + label_margin, legend_y + label_margin
         cv2.putText(current_frame, result_text, label_location,
